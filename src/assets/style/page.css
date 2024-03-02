@@ -1,0 +1,225 @@
+:root {
+  --men-bg-color: #d6e6ff;
+  --women-bg-color: #fde2ff;
+  --unavailable-bg-color: #dcdcdc;
+  --men-color: #002772;
+  --women-color: #720060;
+  --category-color: #3f3f3f;
+  --description-color: #1e1e1e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, Sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  border-radius: 10px;
+  box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.3);
+  width: 1034px;
+  height: 580px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.content-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns with equal width */
+  justify-content: center; /* Center the grid horizontally */
+  align-items: center; /* Center the grid vertically */
+  padding: 48px 56px;
+}
+
+.text-product {
+  width: 548px;
+  height: 484px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.rating {
+  display: flex;
+  justify-content: space-between;
+  color: var(--category-color);
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.rate-container {
+  display: flex;
+  gap: 5px;
+}
+
+.rate-symbol {
+  display: flex;
+  gap: 1px;
+}
+
+.description {
+  font-size: 20px;
+  color: var(--description-color);
+  flex: 1;
+  overflow: auto;
+}
+
+.price {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+hr {
+  margin: 0 1px 15px 1px;
+}
+
+button {
+  width: 259px;
+  height: 42px;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 4px;
+  border-width: 3px;
+}
+
+.buying {
+  color: #fff;
+}
+
+.product {
+  background-color: #fff;
+}
+
+.button-container {
+  display: flex;
+  gap: 20px;
+}
+
+.men-clothing .title,
+.men-clothing .rate-symbol,
+.men-clothing .price,
+.men-clothing .button,
+.men-clothing .product {
+  color: var(--men-color);
+}
+
+.men-clothing .buying,
+.men-clothing .product {
+  border-color: var(--men-color);
+}
+
+.men-clothing .buying {
+  background-color: var(--men-color);
+}
+
+.men-clothing .buying:hover {
+  background-color: var(--men-bg-color);
+  border-color: var(--men-bg-color);
+  color: var(--men-color);
+}
+
+.men-clothing .buying:active {
+  background-color: #fff;
+}
+
+.men-clothing .product:hover {
+  background-color: var(--men-bg-color);
+  border-color: var(--men-bg-color);
+  color: #fff;
+}
+
+.men-clothing .product:active {
+  background-color: var(--men-color);
+}
+
+.women-clothing .title,
+.women-clothing .rate-symbol,
+.women-clothing .price,
+.women-clothing .button,
+.women-clothing .product {
+  color: var(--women-color);
+}
+
+.women-clothing .buying,
+.women-clothing .product {
+  border-color: var(--women-color);
+}
+
+.women-clothing .buying {
+  background-color: var(--women-color);
+}
+
+.women-clothing .buying:hover {
+  background-color: var(--women-bg-color);
+  border-color: var(--women-bg-color);
+  color: var(--women-color);
+}
+
+.women-clothing .buying:active {
+  background-color: #fff;
+}
+
+.women-clothing .product:hover {
+  background-color: var(--women-bg-color);
+  border-color: var(--women-bg-color);
+  color: #fff;
+}
+
+.women-clothing .product:active {
+  background-color: var(--women-color);
+}
+
+.unavailable-page {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Use the full height of the viewport or adjust as needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.unavailable-page button {
+  width: 465px;
+  height: 42px;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 4px;
+  border-width: 3px;
+}
+
+.unavailable-page button:hover {
+  background-color: var(--category-color);
+  border-color: var(--category-color);
+  color: #fff;
+}
+
+.unavailable-page button:active {
+  background-color: var(--description-color);
+}
+
+.unavailable-page p {
+  text-align: center;
+}
+
+.unavailable-page img {
+  position: absolute;
+  z-index: -1;
+  left: 75px;
+}
